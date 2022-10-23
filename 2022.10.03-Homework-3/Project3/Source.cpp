@@ -26,4 +26,6 @@ int main(int argc, char* argv[])
             cnt1 = cnt1 + 1;
         } while (cnt1 <= n);
     }
+
+    return EXIT_SUCCESS;
 }
