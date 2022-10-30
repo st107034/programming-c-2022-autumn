@@ -17,11 +17,11 @@ int main(int argc, char* argv[])
     {
         if ((n * 2) % k != 0)
         {
-            std::cout << (n / k + 1) * 2 * m << std::endl;
+            std::cout << ((2 * n / k) + 1) * m << std::endl;
         }
         else
         {
-            std::cout << (n / k) * 2 * m << std::endl;
+            std::cout << (2 * n / k) * m << std::endl;
         }
     }
 
