@@ -48,5 +48,6 @@ int main(int argc, char* argv[])
 
 	out(i, n, a);
 
+	delete[] a;
 	return EXIT_SUCCESS;
 }
