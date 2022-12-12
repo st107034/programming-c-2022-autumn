@@ -1,19 +1,18 @@
 #include <iostream>
 
-bool prime(int i, int n)
+void prime(int i, int n)
 {
-	if ((i * i) <= n)
+	if (i * i > n)
 	{
-		if (n % i == 0)
-		{
-			return false;
-		}
-		else
-		{
-			prime(i + 1, n);
-		}
+		std::cout << "prime";
+		return;
 	}
-	return true;
+	if (n % i == 0)
+	{
+		std::cout << "composite";
+		return;
+	}
+	prime(i + 1, n);
 }
 
 int main(int argc, char* argv[])
@@ -22,15 +21,6 @@ int main(int argc, char* argv[])
 	int i = 2;
 
 	std::cin >> n;
-
-	if (prime(i, n) == true)
-	{
-		std::cout << "prime";
-	}
-	else
-	{
-		std::cout << "composite";
-	}
-
+	prime(i, n);
 	return EXIT_SUCCESS;
 }
