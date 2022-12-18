@@ -19,4 +19,6 @@ int main(int argc, char* argv[])
 	std::cin >> n;
 
 	std::cout << phi(n) << std::endl;
+
+	return EXIT_SUCCESS;
 }

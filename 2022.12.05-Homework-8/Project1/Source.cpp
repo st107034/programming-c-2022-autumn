@@ -1,22 +1,32 @@
 #include <iostream>
 
-int phi(int n)
+int min(int a, int b, int c, int d)
 {
-	if(n > 1)
+	if (a > b)
 	{
-		return (phi(n - 1) + phi(n - 2));
+		return min(b, a, c, d);
 	}
-	else
+	if (c > d)
 	{
-		return 1;
+		return min(a, b, d, c);
 	}
+	if (a > c)
+	{
+		return min(c, b, a, d);
+	}
+	return a;
 }
 
 int main(int argc, char* argv[])
 {
-	int n = 0;
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	int d = 0;
 
-	std::cin >> n;
+	std::cin >> a >> b >> c >> d;
 
-	std::cout << phi(n) << std::endl;
+	std::cout << min(a,b,c,d) << std::endl;
+
+	return EXIT_SUCCESS;
 }

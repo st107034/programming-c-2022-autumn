@@ -22,4 +22,6 @@ int main(int argc, char* argv[])
 	std::cin >> n >> k;
 
 	std::cout << C(n, k) << std::endl;
+
+	return EXIT_SUCCESS;
 }
