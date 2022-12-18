@@ -7,17 +7,14 @@ int main(int argc, char* argv[])
     int c = 0;
     int d = 0;
     int x = 0;
-    std::cin >> a;
-    std::cin >> b;
-    std::cin >> c;
-    std::cin >> d;
+    std::cin >> a >> b >> c >> d;
     x = (-1 * b) / a;
 
     if ((a == 0) && (b == 0))
     {
         std::cout << "INF" << std::endl;
     }
-    else if ((a == 0) || (b * c == a * d))
+    else if ((a == 0) || (b * c == a * d) || (c * x + d == 0))
     {
         std::cout << "NO" << std::endl;
     }
