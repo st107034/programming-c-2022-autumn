@@ -1,6 +1,6 @@
 #include <iostream>
 
-void spiral(int** list, int n, int b, int a)
+void spiral(int** list, int n, int b, int c)
 {
 	int i = 0;
 	int j = 0;
@@ -8,21 +8,21 @@ void spiral(int** list, int n, int b, int a)
 	{
 		for (j = b; j < n - b; j++)
 		{
-			list[b][j] = a++;
+			list[b][j] = c++;
 		}
 
 		j = j - 2;
 
 		for (i = b + 1; i < n - b; i++)
 		{
-			list[i][n - b - 1] = a++;
+			list[i][n - b - 1] = c++;
 		}
 
 		i = i - 1;
 
 		for (j = j; j >= b; j = j - 1)
 		{
-			list[i][j] = a++;
+			list[i][j] = c++;
 		}
 
 		j++;
@@ -30,10 +30,10 @@ void spiral(int** list, int n, int b, int a)
 
 		for (i = i; i >= b + 1; i = i - 1)
 		{
-			list[i][j] = a++;
+			list[i][j] = c++;
 		}
 
-		spiral(list, n, b + 1, a);
+		spiral(list, n, b + 1, c);
 	}
 }
 
@@ -43,28 +43,28 @@ int main(int argc, char* argv[])
 
 	std::cin >> n;
 
-	int** a = new int* [n];
+	int** list = new int* [n];
 	
 	for (int i = 0; i < n; i++)
 	{
-		a[i] = new int[n];
+		list[i] = new int[n];
 	}
 
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
 		{
-			a[i][j] = n * i + j + 1;
+			list[i][j] = n * i + j + 1;
 		}
 	}
 
-	spiral(a, n, 0, 1);
+	spiral(list, n, 0, 1);
 
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
 		{
-			std::cout << a[i][j] << " ";
+			std::cout << list[i][j] << " ";
 		}
 
 		std::cout << std::endl;
@@ -72,10 +72,10 @@ int main(int argc, char* argv[])
 
 	for (int i = 0; i < n; i++)
 	{
-		delete[] a[i];
+		delete[] list[i];
 	}
 
-	delete[] a;
+	delete[] list;
 
 	return EXIT_SUCCESS;
 }
