@@ -50,4 +50,6 @@ int main(int argc, char* argv[])
 	printAnimal(gibbon);
 	elderAnimal(gibbon);
 	printAnimal(gibbon);
+
+	return EXIT_SUCCESS;
 }

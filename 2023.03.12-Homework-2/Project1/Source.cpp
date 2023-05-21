@@ -41,6 +41,7 @@ int main(int argc, char* argv[])
 
     tournament(animals);
 
+    return EXIT_SUCCESS;
 }
 
 void tournament(Animal** animals)
