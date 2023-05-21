@@ -46,8 +46,8 @@ int main(int argc, char* argv[])
 
 		for (int j = 0; j < n - 1; j++)
 		{
-			s1 = points[i]->x * points[i]->x + points[i]->y * points[i]->y;
-			s2 = points[i+1]->x * points[i+1]->x + points[i+1]->y * points[i+1]->y;
+			s1 = points[j]->x * points[j]->x + points[j]->y * points[j]->y;
+			s2 = points[j+1]->x * points[j+1]->x + points[j+1]->y * points[j+1]->y;
 
 			if (s1 > s2)
 			{
