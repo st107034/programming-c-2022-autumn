@@ -104,4 +104,6 @@ void tournament(Animal** animals)
     std::cout << std::endl;
     std::cout << "The winner is ";
     animals[nwinner]->printInfo();
+
+    delete[] animals;
 }
