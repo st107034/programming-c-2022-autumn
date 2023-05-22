@@ -84,6 +84,6 @@ Complex Complex::operator/(Complex c)
 
 std::ostream& operator << (std::ostream& stream, const Complex& c)
 {
-	stream << "(" << c.re << ")" << "+" << "(" << c.im << ") * i";
+	stream <<  c.re << "+" <<  c.im << "i";
 	return stream;
 }
