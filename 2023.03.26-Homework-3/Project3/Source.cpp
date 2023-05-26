@@ -87,4 +87,5 @@ int main(int argc, char* argv[])
 	std::cout << "Square S = " << s.s() << std::endl;
 	std::cout << "Rectangle S = " << c.s() << std::endl;
 
+	return EXIT_SUCCESS;
 }
